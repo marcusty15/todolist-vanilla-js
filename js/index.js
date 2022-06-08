@@ -29,6 +29,9 @@ const todoList = (event) => {
   event.preventDefault();
   
   const newObjet = new Tarea(inputTarea.value, inputPrioridad.value);
+  if(inputTarea.value===''){
+    return alert('Debe ingresar una Tarea')
+  }
   newObjet.agregarTarea(newObjet);
   mostrarLista();
   inputTarea.value = ''
