@@ -29,8 +29,8 @@ const todoList = (event) => {
   event.preventDefault();
   
   const newObjet = new Tarea(inputTarea.value, inputPrioridad.value);
-  if(inputTarea.value===''){
-    return alert('Debe ingresar una Tarea')
+  if(inputTarea.value==='' || inputPrioridad.value==='Prioridad'){
+    return alert('Debe completar todos los campos')
   }
   newObjet.agregarTarea(newObjet);
   mostrarLista();
